@@ -49,5 +49,4 @@ jobs:
           script: |
             cd /home/runner/
             echo ${{ secrets.DOCKER_TOKEN }} | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
-            docker rm -f llama2_mojo || true
-            docker run -d  -p 127.0.0.1:7861:7860 --name codet5-gradio ${{ secrets.DOCKER_USER }}/codet5-gradio:${{ github.run_number }}
+            docker run -d --rm -p 127.0.0.1:7861:7860 --name codet5-gradio ${{ secrets.DOCKER_USER }}/codet5-gradio:${{ github.run_number }}
