@@ -1,29 +1,28 @@
 # CodeT5-Gradio
 
-CodeT5-Gradio — это веб-приложение, позволяющее генерировать код на основе естественного языка с использованием модели CodeT5 и интерфейса Gradio.
+CodeT5-Gradio is a web application that allows generating code based on natural language descriptions using the CodeT5 model and Gradio interface.
 
-## Возможности
+## Features
 
-- Генерация кода на основе описания задач на естественном языке.
-- Поддержка нескольких языков программирования (зависит от предварительно обученной модели CodeT5).
-- Интерактивный веб-интерфейс для удобного ввода запросов и просмотра результатов.
+- Code generation based on task descriptions in natural language.
+- Supports multiple programming languages (depends on the pre-trained CodeT5 model).
+- Interactive web interface for convenient input of requests and viewing results.
 
-## Начало работы
+## Getting Started
 
-Чтобы запустить проект локально, следуйте этим шагам:
+To run the project locally, follow these steps:
 
-### Предварительные требования
+### Prerequisites
 
 - Docker
-- Docker Compose (для запуска с использованием `docker-compose`) #TODO
+- Docker Compose (for running with `docker-compose`) #TODO
 
-### Установка и запуск
+### Installation and Running
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/emd1tey/codet5-gradio.git
 cd codet5-gradio
 docker build -t codet5-gradio:local . 
 docker run -d --rm -p 7860:7860 --name codet5-gradio codet5-gradio:local 
-````
